@@ -1,0 +1,47 @@
+{
+ "_nota": "Constantes da cena da cozinheira despejando oleo (imagem 941x1672 ajustada a 1080x1920). Coordenadas em px do quadro de trabalho. Medir de novo em cada imagem nova (ver SKILL.md, secao 3).",
+ "quadro": [1080, 1920],
+ "fps": 30,
+ "duracao": 8.0,
+ "recorte": {
+  "caixa_grabcut": [230, 350, 1080, 1920],
+  "linhas_frente": [[545, 738, 600, 742, 18], [600, 742, 760, 760, 26], [505, 745, 560, 742, 10]],
+  "caixas_fundo": [[470, 990, 575, 1100], [505, 870, 640, 920], [600, 815, 700, 922]]
+ },
+ "liquido_cor": {"r_min": 140, "r_menos_b_min": 70, "b_max": 140},
+ "fio": {"caixa": [350, 874, 430, 995], "labio": [393, 879], "y_entrada": 874, "y_entrada_fim": 884, "y_corte": 950},
+ "recipiente": {
+  "osso": "mao_e",
+  "elipse_interna": [389.5, 780.0, 102.5, 93.0],
+  "elipse_externa_excluir": [[355, 858, 432, 2000], [478, 728, 2000, 778]],
+  "elipse_externa_limites": [270, 670, 492, 880],
+  "caixa_liquido": [300, 820, 495, 900],
+  "suavizar_bico": [320, 850, 460, 890],
+  "faixa_fonte_graus": [118, 150],
+  "faixa_alvo_graus": [55, 118],
+  "faixa_alvo_y_min": 840,
+  "fio_resto_caixa": [355, 874, 440, 960],
+  "Rr": 102.5, "Rf": 92.0, "Dp": 50.0,
+  "camera_elevacao": 21.0,
+  "y_lim_poca": 872
+ },
+ "despejo": {"v_ini_ml": 150.0, "beta_ini": 36.0, "vazao_alvo": 42.0, "q_img": 40.0, "t_comeca": 0.6,
+             "t_levanta": 6.6, "beta_max": 64.0, "fps_sim": 240},
+ "pouso": {"y": 1118.0, "centro_poca": [393.0, 1118.0], "achat": 0.36, "nu": 6e-5, "kappa": 0.9,
+           "caixa_sobreposicao": [300, 1000, 560, 1200], "caixa_poca": [300, 1040, 700, 1165]},
+ "cuba": {"poligono": [[443, 1106], [446, 1100], [455, 1096], [625, 1046], [760, 1022], [760, 1150], [700, 1143], [600, 1131], [500, 1119], [450, 1112]],
+          "canto": [447.0, 1108.0], "direcao_fundo": [0.992, 0.123], "ponte": [446.0, 1107.0]},
+ "ambiente": {
+  "sombra": {"caixa": [915, 470, 1080, 940], "faixas": [[470, 489], [489, 494], [494, 540], [540, 545], [545, 940]], "pivo": [1120, 430], "rampas": [25, 20, 22]},
+  "planta": {"caixa": [590, 800, 720, 945], "base_y": 918}
+ },
+ "personagem": {
+  "rig_ajustes": {"j": {"punho_e": [598, 728], "mao_e": [298, 806]}, "olhos": [[688, 584, 728, 609]], "boca": null},
+  "piscadas": [0.55, 4.3],
+  "olhar": [[1.2, 0.8, -1.3], [6.7, 0.8, 0.9]]
+ },
+ "camera": {"zoom": [1.07, 1.10], "ancora": [760.0, 1920.0]},
+ "gotas_apos_fim": [0.30, 0.95, 1.75],
+ "som": {"passaros": [[0.9, 3900, 3], [3.4, 4300, 2], [6.1, 3700, 4]], "pan_liquido": -0.25, "pan_janela": 0.55},
+ "previa": {"selo": [64, 220], "errado": [110, 905], "errado_t": 1.75, "legenda": ["Legenda de exemplo", "em duas linhas"]}
+}
