@@ -2,7 +2,7 @@
 
 Código da skill **animar-personagens** do Claude: marionete 2D por esqueleto para animar personagens ilustrados de imagens estáticas, com líquido despejado, ambiente (sombra de folhagem, planta, vento) e som provisório para cenas de Reels. Sem IA generativa: o personagem é recortado, o fundo é reconstruído e a imagem é deformada por uma malha.
 
-As instruções de uso ficam na própria skill. Este repositório só guarda o código, numa versão marcada por tag e conferida por hash.
+As instruções de uso ficam na própria skill. Este repositório só guarda o código. A skill fixa o commit testado e confere cada arquivo por hash, então mudanças em `main` não chegam a ela sem novo teste.
 
 ## Estrutura
 
@@ -23,11 +23,15 @@ As instruções de uso ficam na própria skill. Este repositório só guarda o c
 
 ## Instalação
 
+Versão 1.0.0 = commit `8b75be3deed8264682b4dae023d3926be8b41f3a` (testado em 30/10/2026).
+
 ```bash
-git clone --depth 1 --branch v1.0.0 https://github.com/mgentine/animar-personagens.git ~/anima
-cd ~/anima && sha256sum -c SHA256SUMS
+git init -q ~/anima && cd ~/anima
+git remote add origin https://github.com/mgentine/animar-personagens.git
+git fetch -q --depth 1 origin 8b75be3deed8264682b4dae023d3926be8b41f3a && git checkout -q FETCH_HEAD
+sha256sum -c SHA256SUMS
 ```
 
 Dependências e modelos: ver a seção de instalação da skill.
 
-Testado em 30/10/2026 com Python 3.13, OpenCV 5.0, NumPy 2.5, mediapipe 0.10.32, onnxruntime 1.29, scikit-image 0.26, SciPy 1.18, moderngl sobre EGL/llvmpipe e ffmpeg 6.1.
+Testado com Python 3.13, OpenCV 5.0, NumPy 2.5, mediapipe 0.10.32, onnxruntime 1.29, scikit-image 0.26, SciPy 1.18, moderngl sobre EGL/llvmpipe e ffmpeg 6.1.
